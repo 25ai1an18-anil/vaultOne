@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VaultOne ATM Simulator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="scene" aria-hidden="true"></canvas>
+
+<header class="brand">
+  <h1>VaultOne</h1>
+  <p>ATM simulator · demo cards: <b>1111222233334444</b> / PIN 1234</p>
+</header>
+
+<main class="atm" id="atm">
+  <div class="screen" id="screen"><!-- rendered by app.js --></div>
+  <div class="pad" id="pad">
+    <button data-k="1">1</button><button data-k="2">2</button><button data-k="3">3</button>
+    <button data-k="4">4</button><button data-k="5">5</button><button data-k="6">6</button>
+    <button data-k="7">7</button><button data-k="8">8</button><button data-k="9">9</button>
+    <button data-k="C" class="warn">Clear</button><button data-k="0">0</button><button data-k="OK" class="go">Enter</button>
+  </div>
+  <div class="slot" id="slot"><span id="cash"></span></div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="scene.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
